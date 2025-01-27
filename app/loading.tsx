@@ -15,6 +15,7 @@ const LoadingPage = () => {
             alt="loading..."
             height={150}
             width={150}
+            className="w-auto h-auto"
         />
     </div>
   )
