@@ -3,6 +3,7 @@ import { ModeToggle } from "./mode-toggler"
 import Link from "next/link"
 import { ShoppingCart, UserIcon } from "lucide-react"
 import Sidebar from "./sidebar"
+import UserButton from "./user-button"
 
 const Menu = () => {
   return (
@@ -14,11 +15,7 @@ const Menu = () => {
                     <ShoppingCart /> Cart
                     </Link>
             </Button>
-            <Button asChild>
-                    <Link href='/sign-in'>
-                    <UserIcon /> Sign In
-                    </Link>
-            </Button>
+            <UserButton />
         </nav>
         <Sidebar />
     </div>

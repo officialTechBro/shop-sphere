@@ -5,10 +5,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { EllipsisVertical, ShoppingCart, UserIcon } from "lucide-react"
+import { EllipsisVertical, ShoppingCart } from "lucide-react"
 import { ModeToggle } from "./mode-toggler"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import UserButton from "./user-button"
 
 const Sidebar = () => {
   return (
@@ -25,11 +26,7 @@ const Sidebar = () => {
                         <ShoppingCart /> Cart
                     </Link>
                 </Button>
-                <Button asChild>
-                     <Link href='/sign-in'>
-                        <UserIcon /> Sign In
-                     </Link>
-                </Button>
+                <UserButton />
                 <SheetDescription></SheetDescription>
             </SheetContent>
         </Sheet>
