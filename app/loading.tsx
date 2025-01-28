@@ -1,5 +1,5 @@
 import Image from "next/image"
-import spinner from '@/assets/loader.gif'
+// import spinner from '@/assets/loader.gif'
 
 const LoadingPage = () => {
   return (
@@ -11,11 +11,11 @@ const LoadingPage = () => {
         width: '100vw'
     }}>
         <Image 
-            src={spinner}
+            src='/images/logo.png'
             alt="loading..."
-            height={150}
-            width={150}
-            className="w-auto h-auto"
+            height={50}
+            width={50}
+            className="w-auto h-auto animate-spin"
         />
     </div>
   )

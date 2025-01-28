@@ -1,4 +1,3 @@
-import CredentialaSignInForm from "@/components/shared/form/sign-in"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { APP_NAME } from "@/lib/constants"
 import { Metadata } from "next"
@@ -6,12 +5,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { auth } from "@/auth"
 import { redirect } from "next/navigation"
+import SignUpForm from "@/components/shared/form/sign-up"
 
 export const metadata: Metadata = {
-    title: 'Sign In'
+    title: 'Sign IUp'
 }
 
-const SignInPage = async (props: {
+const SignUpPage = async (props: {
     searchParams: Promise<{callbackUrl: string}>
 }) => {
 
@@ -35,14 +35,14 @@ const SignInPage = async (props: {
                         priority={true}
                     />
                 </Link>
-                <CardTitle className="text-center font-sans">Sign in</CardTitle>
-                <CardDescription className="text-center tracking-wider font-sans">Sign in to your account</CardDescription>
+                <CardTitle className="text-center font-sans">Create Account</CardTitle>
+                <CardDescription className="text-center tracking-wider font-sans">Enter your information below to sign up</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-                <CredentialaSignInForm />
+                <SignUpForm />
             </CardContent>
         </Card>
     </div>
   )
 }
-export default SignInPage
+export default SignUpPage
